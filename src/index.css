@@ -1,0 +1,140 @@
+*, h1, p, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body, .dice-cntr, .dice-cntr p {
+  display: grid;
+  place-content: center;
+}
+
+header, .current-time, .stats-modal {
+  display: flex;
+}
+
+header, .stats-modal {
+  flex-direction: column;
+}
+
+main, main button {
+  margin-top: 3rem;
+}
+
+.dice-cntr p, main button {
+  font: 700 2.5rem 'Karla', sans-serif;
+}
+
+.current-time, .stats-modal p {
+  font: 400 2rem 'Inter', sans-serif;
+}
+
+h1, .stats-modal p, .dice-cntr p {
+  color: #2B283A;
+}
+
+.dice-cntr p, .stats-modal {
+  background: #FFF;
+}
+
+.wrapper, main button, .stats-modal {
+  border-radius: 1rem;
+}
+
+body {
+  width: 100svw;
+  height: 100svh;
+  padding: 3rem 4rem;
+  background: #0B2434;
+  text-align: center;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 400px;
+  background: #F5F5F5;
+  padding: 3rem 3.5rem;
+}
+
+header {
+  align-items: center;
+}
+
+h1 {
+  font: 700 4rem 'Karla', sans-serif;
+  letter-spacing: -.0768rem;
+}
+
+.sub-text {
+  color: #4A4E74;
+  font: 400 1.6rem 'Inter', sans-serif;
+  letter-spacing: -0.393px;
+}
+
+.dice-cntr {
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: auto auto;
+  gap: 2rem;
+}
+
+.dice-cntr p {
+  padding: 1rem 1.8rem;
+  border-radius: .5rem;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.dice-cntr p, main button {
+  cursor: pointer;
+}
+
+main button {
+  padding: 1rem 1.5em;
+  color: #FFF;
+  background: #5035FF;
+  box-shadow: 0 4px 0 #0B2434;
+  transition: .3s all ease;
+}
+
+main button:hover {
+  background: #6751f8;
+}
+
+main button:active {
+  box-shadow: 0 3px 0 #5035FF;
+  transform: translateY(1px);
+}
+
+.current-time {
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.stats-modal {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  gap: 1.6rem;
+  width: 65%;
+  height: fit-content;
+  padding: 4em 2em;
+  box-shadow: 0 0 5rem #6d6d6d;
+}
+
+.stats-modal h2 {
+  font: 700 3rem 'Karla', sans-serif;
+}
+
+.stats-modal p {
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .sub-text {
+    max-width: 90%;
+  }
+}
